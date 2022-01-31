@@ -1,0 +1,6 @@
+name: Example
+version: "${version}"
+description: "An example plugin."
+main: org.creativecraft.example.ExamplePlugin
+softdepend: [PlaceholderAPI]
+api-version: 1.18
