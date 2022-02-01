@@ -44,14 +44,14 @@ public class MessagesConfig {
     public void setDefaults() {
         messages.addDefault("messages.generic.prefix", "&a&lEx&fample &8> &f");
 
-        messages.addDefault("messages.reload.success", "Example has been &asuccessfully&f reloaded.");
-        messages.addDefault("messages.reload.failed", "Example &cfailed&f to reload. Check console for details.");
-        messages.addDefault("messages.reload.description", "Reload the Example plugin configuration.");
+        messages.addDefault("messages.reload.success", "Plugin has been &asuccessfully&f reloaded.");
+        messages.addDefault("messages.reload.failed", "Plugin &cfailed&f to reload. Check console for details.");
+        messages.addDefault("messages.reload.description", "Reload the plugin configuration.");
 
         messages.addDefault("messages.help.header", "&a&m+&8&m                                &a&l Ex&fample &8&m                                &a&m+");
         messages.addDefault("messages.help.format", "&8➝ &a/{command} &7{parameters} &f- {description}");
         messages.addDefault("messages.help.footer", "&a&m+&8&m                                                                             &a&m+");
-        messages.addDefault("messages.help.description", "View the Example help.");
+        messages.addDefault("messages.help.description", "View the plugin help.");
 
         messages.options().copyDefaults(true);
     }

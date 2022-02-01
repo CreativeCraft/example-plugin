@@ -29,7 +29,7 @@ public class ExamplePlugin extends JavaPlugin {
             new PlaceholderApi(this).register();
         }
 
-        // new MetricsLite(this, 13987);
+        // new MetricsLite(this, 00000);
     }
 
     @Override
@@ -94,9 +94,11 @@ public class ExamplePlugin extends JavaPlugin {
      * @return String
      */
     public String localize(String key) {
+        String message = messagesConfig.getMessages().getString(key);
+
         return ChatColor.translateAlternateColorCodes(
             '&',
-            messagesConfig.getMessages().getString(key, key + " is missing.")
+            message == null ? key + " is missing." : message
         );
     }
 

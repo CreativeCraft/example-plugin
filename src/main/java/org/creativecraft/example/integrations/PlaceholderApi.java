@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 
 public class PlaceholderApi extends PlaceholderExpansion {
     private ExamplePlugin plugin;
-    private String identifier = "example_plugin";
+    private String identifier = "example";
 
     public PlaceholderApi(ExamplePlugin plugin) {
         this.plugin = plugin;

@@ -8,6 +8,7 @@ import org.creativecraft.example.ExamplePlugin;
 import org.bukkit.command.CommandSender;
 
 @CommandAlias("%example")
+@Description("An example plugin.")
 public class ExampleCommand extends BaseCommand {
     private final ExamplePlugin plugin;
 
@@ -22,7 +23,7 @@ public class ExampleCommand extends BaseCommand {
      */
     @HelpCommand
     @Syntax("[page]")
-    @Description("View the Example help.")
+    @Description("View the plugin help.")
     public void onHelp(CommandSender sender, CommandHelp help) {
         plugin.sendRawMessage(sender, plugin.localize("messages.help.header"));
 
@@ -46,7 +47,7 @@ public class ExampleCommand extends BaseCommand {
      */
     @Subcommand("reload")
     @CommandPermission("example.admin")
-    @Description("Reload the Example plugin configuration.")
+    @Description("Reload the plugin configuration.")
     public void onReload(CommandSender sender) {
         try {
             plugin.reload();
