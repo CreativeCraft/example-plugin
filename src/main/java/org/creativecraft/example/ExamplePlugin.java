@@ -81,13 +81,6 @@ public class ExamplePlugin extends JavaPlugin {
     }
 
     /**
-     * Retrieve the locale configuration.
-     */
-    public MessagesConfig getMessagesConfig() {
-        return messagesConfig;
-    }
-
-    /**
      * Retrieve a localized message.
      *
      * @param  key The locale key.

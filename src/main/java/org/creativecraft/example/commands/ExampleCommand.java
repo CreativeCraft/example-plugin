@@ -17,6 +17,18 @@ public class ExampleCommand extends BaseCommand {
     }
 
     /**
+     * An example command.
+     *
+     * @param sender The command sender.
+     */
+    @Subcommand("example")
+    @CommandPermission("example.use")
+    @Description("Just an example command.")
+    public void onExample(CommandSender sender) {
+        plugin.sendMessage(sender, "Hello world.");
+    }
+
+    /**
      * Retrieve the plugin help.
      *
      * @param sender The command sender.
@@ -30,7 +42,8 @@ public class ExampleCommand extends BaseCommand {
         for (HelpEntry entry : help.getHelpEntries()) {
             plugin.sendRawMessage(
                 sender,
-                plugin.localize("messages.help.format")
+                plugin
+                    .localize("messages.help.format")
                     .replace("{command}", entry.getCommand())
                     .replace("{parameters}", entry.getParameterSyntax())
                     .replace("{description}", plugin.localize("messages." + entry.getCommand().split("\\s+")[1] + ".description"))
